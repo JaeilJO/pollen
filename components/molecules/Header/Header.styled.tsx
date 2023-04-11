@@ -18,7 +18,7 @@ export const Logo = styled.div`
   font-weight: 900;
   font-family: "NanumGothic";
   transition: 280ms;
-  color: ${(props) => props.theme.PrimaryColor};
+
   @media screen and (max-width: 500px) {
     font-size: 2rem;
   }
@@ -38,14 +38,6 @@ export const NavigationItem = styled(Link)`
   font-weight: 500;
   text-decoration: none;
 
-  ${(props) =>
-    props.activeButton === props.item
-      ? `border-bottom : 5px solid ${props.theme.PrimaryColor};`
-      : ``}
-  color: ${(props) =>
-    props.activeButton === props.item
-      ? props.theme.PrimaryColor
-      : props.theme.NonSelectColor};
   @media screen and (max-width: 500px) {
     font-size: 1rem;
   }

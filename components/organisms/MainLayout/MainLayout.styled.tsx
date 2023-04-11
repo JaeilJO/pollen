@@ -6,8 +6,10 @@ export const BackGround = styled.div`
   min-width: 360px;
   max-width: 1200px;
   margin: auto;
+
+  min-height: 100vh;
 `;
 
 export const Main = styled.main`
-  background-color: skyblue;
+  flex-grow: 1;
 `;

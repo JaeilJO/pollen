@@ -29,13 +29,7 @@ const Header = () => {
         <Navigation>
           {navigationItems.map((item) => (
             <li key={item}>
-              <NavigationItem
-                href={item === "Main" ? "/" : item.toLowerCase()}
-                item={item}
-                activeButton={activeButton}
-              >
-                {item}
-              </NavigationItem>
+              <NavigationItem href={""}>{item}</NavigationItem>
             </li>
           ))}
         </Navigation>
