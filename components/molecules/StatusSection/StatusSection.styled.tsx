@@ -12,7 +12,6 @@ export const StatusBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
 `;
 
 export const StatusTextBox = styled.div`
@@ -22,7 +21,7 @@ export const StatusTextBox = styled.div`
   color: ${(props) => props.theme.PrimaryColor};
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 `;
 export const StatusButtonBox = styled.div`
   flex-grow: 1;

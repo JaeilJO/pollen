@@ -29,15 +29,21 @@ export const NavigationItem = styled(Link)`
   text-decoration: none;
   position: relative;
   color: ${(props) =>
-    props.nowRouter === props.href ? props.theme.PrimaryColor : `black`};
+    props.nowRouter === props.href
+      ? props.theme.PrimaryColor
+      : props.theme.NonSelectColor};
   &:before {
-    display: ${(props) => (props.nowRouter === props.href ? `` : `none`)};
     content: "";
     position: absolute;
-    background-color: ${(props) => props.theme.PrimaryColor};
-    width: 100%;
+    background-color: ${(props) =>
+      props.nowRouter === props.href
+        ? props.theme.PrimaryColor
+        : props.theme.NonSelectColor};
+    width: ${(props) => (props.nowRouter === props.href ? `100%` : `0`)};
     height: 5px;
+    left: 0;
     bottom: -5px;
+    transition: 320ms;
   }
   @media screen and (max-width: 500px) {
     font-size: 1rem;
