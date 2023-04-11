@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => {
   return (
     <BackGround>
       <Header />
-      <Main>{children}</Main>
+      {children}
     </BackGround>
   );
 };

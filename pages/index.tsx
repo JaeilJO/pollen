@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
-import MainLayout from "../components/organisms/MainLayout/MainLayout";
+
+import MainPageContents from "../components/organisms/MainPageContents/MainPageContents";
 
 const Home: NextPage = () => {
-  return <div>sss</div>;
+  return <MainPageContents />;
 };
 
 export default Home;

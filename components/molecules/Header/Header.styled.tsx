@@ -27,7 +27,18 @@ export const NavigationItem = styled(Link)`
   font-size: 1.5rem;
   font-weight: 500;
   text-decoration: none;
-
+  position: relative;
+  color: ${(props) =>
+    props.nowRouter === props.href ? props.theme.PrimaryColor : `black`};
+  &:before {
+    display: ${(props) => (props.nowRouter === props.href ? `` : `none`)};
+    content: "";
+    position: absolute;
+    background-color: ${(props) => props.theme.PrimaryColor};
+    width: 100%;
+    height: 5px;
+    bottom: -5px;
+  }
   @media screen and (max-width: 500px) {
     font-size: 1rem;
   }
