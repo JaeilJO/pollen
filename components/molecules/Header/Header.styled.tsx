@@ -6,8 +6,8 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 20px;
   height: 100px;
-
   align-items: center;
+
   @media screen and (max-width: 500px) {
     height: 50px;
   }
@@ -17,6 +17,7 @@ export const Navigation = styled.ul`
   display: flex;
   gap: 40px;
   transition: 280ms;
+
   @media screen and (max-width: 500px) {
     gap: 30px;
   }

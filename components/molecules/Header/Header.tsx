@@ -3,7 +3,11 @@ import { HeaderContainer, Navigation, NavigationItem } from "./Header.styled";
 import Logo from "../../atoms/Logo/Logo";
 
 const Header = () => {
-  const navigationItems = ["Detail", "Main", "Contact"];
+  const navigationItems = [
+    { item_name: "Detail", href: "detail" },
+    { item_name: "Main", href: "/" },
+    { item_name: "Contact", href: "contact" },
+  ];
 
   return (
     <HeaderContainer>
@@ -11,8 +15,8 @@ const Header = () => {
       <nav>
         <Navigation>
           {navigationItems.map((item) => (
-            <li key={item}>
-              <NavigationItem href={""}>{item}</NavigationItem>
+            <li key={item.item_name}>
+              <NavigationItem href={item.href}>{item.item_name}</NavigationItem>
             </li>
           ))}
         </Navigation>
