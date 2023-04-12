@@ -33,3 +33,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # pollen
+
+# Grommet-Icons 사용 문서:
+- Location: © 2020 Hewlett Packard Enterprise Development LP, available under Apache License, Version 2.0
+- Refresh: © 2020 Hewlett Packard Enterprise Development LP, available under Apache License, Version 2.0
+
+
+Apache License, Version 2.0은 라이선스 조건에 따라 해당 소프트웨어를 사용하는 프로젝트에서 라이선스 정보를 공개하도록 요구하고 있습니다. 따라서, 이 프로젝트에서 사용된 Grommet-Icons 아이콘들은 Apache License, Version 2.0을 따르고 있음을 알려드립니다.
