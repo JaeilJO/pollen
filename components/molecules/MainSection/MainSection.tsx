@@ -1,6 +1,5 @@
 import React from "react";
 import { MainSectionContainer, StatusImage } from "./MainSection.styled";
-import Image from "next/image";
 
 const MainSection = () => {
   return (

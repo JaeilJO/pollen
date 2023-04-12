@@ -28,18 +28,23 @@ export const NavigationItem = styled(Link)`
   font-weight: 500;
   text-decoration: none;
   position: relative;
+
   color: ${(props) =>
     props.nowRouter === props.href
       ? props.theme.PrimaryColor
       : props.theme.NonSelectColor};
+
   &:before {
     content: "";
     position: absolute;
+
     background-color: ${(props) =>
       props.nowRouter === props.href
         ? props.theme.PrimaryColor
         : props.theme.NonSelectColor};
+
     width: ${(props) => (props.nowRouter === props.href ? `100%` : `0`)};
+
     height: 5px;
     left: 0;
     bottom: -5px;
