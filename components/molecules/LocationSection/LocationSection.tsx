@@ -5,13 +5,17 @@ import {
   LocationSectionContainer,
   LocationTextBox,
 } from "./LocationSection.styled";
+import { GrLocation } from "react-icons/gr";
 
 const LocationSection = () => {
   return (
     <LocationSectionContainer>
       <LocationBox>
         <LocationTextBox>Seoul</LocationTextBox>
-        <LocationButtonBox>Hello</LocationButtonBox>
+        <LocationButtonBox>
+          <GrLocation />
+          <span>Set Location</span>
+        </LocationButtonBox>
       </LocationBox>
     </LocationSectionContainer>
   );

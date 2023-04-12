@@ -9,6 +9,7 @@ export const LocationBox = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   justify-content: space-between;
 `;
 
@@ -22,8 +23,21 @@ export const LocationTextBox = styled.div`
   align-items: flex-end;
 `;
 export const LocationButtonBox = styled.div`
-  flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  color: ${(props) => props.theme.SecondaryColor};
+  align-items: flex-start;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 320ms;
+
+  svg path {
+    stroke: ${(props) => props.theme.SecondaryColor};
+  }
+  &:hover {
+    color: ${(props) => props.theme.PrimaryColor};
+    & svg path {
+      stroke: ${(props) => props.theme.PrimaryColor};
+    }
+  }
 `;
