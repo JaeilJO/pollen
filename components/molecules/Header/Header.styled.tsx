@@ -30,7 +30,7 @@ export const NavigationItem = styled(Link)`
   position: relative;
 
   color: ${(props) =>
-    props.nowRouter === props.href
+    props.now_router === props.href
       ? props.theme.PrimaryColor
       : props.theme.NonSelectColor};
 
@@ -39,11 +39,11 @@ export const NavigationItem = styled(Link)`
     position: absolute;
 
     background-color: ${(props) =>
-      props.nowRouter === props.href
+      props.now_router === props.href
         ? props.theme.PrimaryColor
         : props.theme.NonSelectColor};
 
-    width: ${(props) => (props.nowRouter === props.href ? `100%` : `0`)};
+    width: ${(props) => (props.now_router === props.href ? `100%` : `0`)};
 
     height: 5px;
     left: 0;

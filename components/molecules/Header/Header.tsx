@@ -10,8 +10,7 @@ const Header = () => {
     { item_name: "Contact", href: "/contact" },
   ];
   const router = useRouter();
-  let nowRouter = router.pathname;
-  console.log(nowRouter);
+  let now_router = router.pathname;
 
   return (
     <HeaderContainer>
@@ -20,7 +19,7 @@ const Header = () => {
         <Navigation>
           {navigationItems.map((item) => (
             <li key={item.item_name}>
-              <NavigationItem nowRouter={nowRouter} href={item.href}>
+              <NavigationItem now_router={now_router} href={item.href}>
                 {item.item_name}
               </NavigationItem>
             </li>
