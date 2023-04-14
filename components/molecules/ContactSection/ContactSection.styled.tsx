@@ -4,6 +4,7 @@ export const ContactSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 10px;
 `;
 
 export const InputBox = styled.div`

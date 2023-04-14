@@ -6,6 +6,7 @@ import {
   SPAN,
   TextArea,
 } from "./ContactSection.styled";
+import ContactInput from "../ContactInput/ContactInput";
 
 const ContactSection = () => {
   const [b, setB] = useState(false);
@@ -22,12 +23,8 @@ const ContactSection = () => {
       <div style={{ fontSize: "3rem", fontWeight: "700", color: "#E66E62" }}>
         CONTACT US
       </div>
-      <InputBox>
-        <INPUT onChange={a} />
-        <SPAN b={b}>Full Name</SPAN>
-      </InputBox>
-
-      <INPUT placeholder={"Email"} />
+      <ContactInput placeHolder={"Full Name"} />
+      <ContactInput placeHolder={"Email"} type={"email"} />
       <TextArea />
       <button>Hello</button>
     </ContactSectionContainer>
