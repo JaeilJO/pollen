@@ -1,5 +1,9 @@
 import React, { useCallback, useState } from "react";
-import { InputBox, InputContainer, PlaceHolder } from "./ContactInput.styled";
+import {
+  InputBox,
+  InputContainer,
+  PlaceHolderInInput,
+} from "./ContactInput.styled";
 
 const ContactInput = ({ placeHolder, type }) => {
   const [inputChange, setInputChange] = useState(false);
@@ -12,7 +16,9 @@ const ContactInput = ({ placeHolder, type }) => {
   return (
     <InputContainer>
       <InputBox type={type} onChange={onChange} />
-      <PlaceHolder inputChange={inputChange}>{placeHolder}</PlaceHolder>
+      <PlaceHolderInInput inputChange={inputChange}>
+        {placeHolder}
+      </PlaceHolderInInput>
     </InputContainer>
   );
 };

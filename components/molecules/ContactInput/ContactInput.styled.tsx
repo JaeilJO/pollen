@@ -15,7 +15,7 @@ export const InputBox = styled.input`
   outline: none;
 `;
 
-export const PlaceHolder = styled.span`
+export const PlaceHolderInInput = styled.span`
   position: absolute;
   transition: 320ms;
   left: 5px;
