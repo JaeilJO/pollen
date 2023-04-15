@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContactSectionContainer = styled.form`
+export const ContactSectionForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 50px;

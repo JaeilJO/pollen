@@ -5,7 +5,7 @@ import {
   TextAreaContainer,
 } from "./ContactTextArea.styled";
 
-const ContactTextArea = ({ placeHolder }) => {
+const ContactTextArea = ({ placeHolder, name }) => {
   const [textAreaChange, setTextAreaChange] = useState(false);
   const onChange = useCallback(
     (e) => {
@@ -15,7 +15,7 @@ const ContactTextArea = ({ placeHolder }) => {
   );
   return (
     <TextAreaContainer>
-      <TextAreaBox onChange={onChange} />
+      <TextAreaBox onChange={onChange} name={name} />
       <PlaceHolderInTextArea textAreaChage={textAreaChange}>
         {placeHolder}
       </PlaceHolderInTextArea>

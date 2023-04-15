@@ -5,8 +5,9 @@ import {
   PlaceHolderInInput,
 } from "./ContactInput.styled";
 
-const ContactInput = ({ placeHolder, type }) => {
+const ContactInput = ({ placeHolder, type, name, register }) => {
   const [inputChange, setInputChange] = useState(false);
+
   const onChange = useCallback(
     (e) => {
       e.target.value ? setInputChange(true) : setInputChange(false);
@@ -15,7 +16,7 @@ const ContactInput = ({ placeHolder, type }) => {
   );
   return (
     <InputContainer>
-      <InputBox type={type} onChange={onChange} />
+      <InputBox type={type} onChange={onChange} name={name} />
       <PlaceHolderInInput inputChange={inputChange}>
         {placeHolder}
       </PlaceHolderInInput>
