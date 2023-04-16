@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   PlaceHolderInTextArea,
   TextAreaBox,
@@ -11,14 +11,23 @@ const ContactTextArea = ({ placeHolder, name }) => {
   const state = useForm();
   const onChange = useCallback(
     (e) => {
-      e.target.value ? setTextAreaChange(true) : setTextAreaChange(false);
+      e.preventDefault();
+      e.target.value || state.info.message === ""
+        ? setTextAreaChange(true)
+        : setTextAreaChange(false);
       state.setInfo(name, e.target.value);
     },
     [textAreaChange]
   );
+  useEffect(() => {
+    state.info.message === ""
+      ? setTextAreaChange(false)
+      : setTextAreaChange(true);
+  });
+
   return (
     <TextAreaContainer>
-      <TextAreaBox onChange={onChange} name={name} />
+      <TextAreaBox onChange={onChange} name={name} value={state.info.message} />
       <PlaceHolderInTextArea textAreaChage={textAreaChange}>
         {placeHolder}
       </PlaceHolderInTextArea>

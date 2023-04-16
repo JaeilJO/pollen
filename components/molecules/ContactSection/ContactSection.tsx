@@ -7,8 +7,12 @@ import { useForm } from "../../../store/store";
 const ContactSection = () => {
   const state = useForm();
 
+  const onSubmit = useCallback((e) => {
+    e.preventDefault();
+    state.setSubmit();
+  }, []);
   return (
-    <ContactSectionForm>
+    <ContactSectionForm onSubmit={onSubmit}>
       <div style={{ fontSize: "3rem", fontWeight: "700", color: "#E66E62" }}>
         CONTACT US
       </div>
