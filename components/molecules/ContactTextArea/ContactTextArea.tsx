@@ -1,33 +1,26 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import {
   PlaceHolderInTextArea,
   TextAreaBox,
   TextAreaContainer,
 } from "./ContactTextArea.styled";
-import { useForm } from "../../../store/store";
 
 const ContactTextArea = ({ placeHolder, name }) => {
   const [textAreaChange, setTextAreaChange] = useState(false);
-  const state = useForm();
-  const onChange = useCallback(
-    (e) => {
-      e.preventDefault();
-      e.target.value || state.info.message === ""
-        ? setTextAreaChange(true)
-        : setTextAreaChange(false);
-      state.setInfo(name, e.target.value);
-    },
-    [textAreaChange]
-  );
-  useEffect(() => {
-    state.info.message === ""
-      ? setTextAreaChange(false)
-      : setTextAreaChange(true);
-  });
+  const ref = useRef();
+  const onFocus = useCallback(() => {
+    setTextAreaChange(true);
+  }, []);
+
+  const onBlur = useCallback(() => {
+    if (ref.current?.value === "") {
+      setTextAreaChange(false);
+    }
+  }, []);
 
   return (
     <TextAreaContainer>
-      <TextAreaBox onChange={onChange} name={name} value={state.info.message} />
+      <TextAreaBox name={name} ref={ref} onFocus={onFocus} onBlur={onBlur} />
       <PlaceHolderInTextArea textAreaChage={textAreaChange}>
         {placeHolder}
       </PlaceHolderInTextArea>

@@ -4,31 +4,31 @@ import {
   InputContainer,
   PlaceHolderInInput,
 } from "./ContactInput.styled";
-import { useForm } from "../../../store/store";
 
 const ContactInput = ({ placeHolder, type, name }) => {
   const [inputChange, setInputChange] = useState(false);
-  const state = useForm();
-  const onChange = useCallback(
-    (e) => {
-      e.preventDefault();
-      e.target.value ? setInputChange(true) : setInputChange(false);
-      state.setInfo(name, e.target.value);
-    },
-    [inputChange]
-  );
-  useEffect(() => {
-    state.info?.[name] === "" ? setInputChange(false) : setInputChange(true);
-  });
+  const ref = useRef();
+
+  const onFocus = useCallback(() => {
+    setInputChange(true);
+  }, []);
+
+  const onBlur = useCallback(() => {
+    if (ref.current?.value === "") {
+      setInputChange(false);
+    }
+  }, []);
 
   return (
     <InputContainer>
       <InputBox
         type={type}
-        onChange={onChange}
         name={name}
-        value={state.info?.[name]}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        ref={ref}
       />
+      {console.log("render")}
       <PlaceHolderInInput inputChange={inputChange}>
         {placeHolder}
       </PlaceHolderInInput>
