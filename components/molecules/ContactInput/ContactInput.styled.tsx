@@ -6,7 +6,7 @@ export const InputContainer = styled.div`
 `;
 
 export const InputBox = styled.input`
-  font-size: 1rem;
+  font-size: ${(props) => props.theme.Font.md.size};
   padding: 6px 5px;
   border: none;
   box-shadow: none;
@@ -20,10 +20,10 @@ export const PlaceHolderInInput = styled.span`
   transition: 320ms;
   left: 5px;
   top: ${(props) => (props.inputChange ? `-15px` : `10px`)};
-  font-size: ${(props) => (props.inputChange ? `0.8rem` : `1rem`)};
+  font-size: ${(props) => (props.inputChange ? props.theme.Font.sm.size : props.theme.Font.md.size)};
   pointer-events: none;
-  font-weight: ${(props) => (props.inputChange ? `800` : ``)};
+  font-weight: ${(props) => (props.inputChange ? props.theme.Font.md.weight : props.theme.Font.sm.weight)};
   color: ${(props) =>
-    props.inputChange ? props.theme.PrimaryColor : props.theme.BlackColor};
+    props.inputChange ? props.theme.Color.Primary : props.theme.Color.Black};
 \` ;
 `;

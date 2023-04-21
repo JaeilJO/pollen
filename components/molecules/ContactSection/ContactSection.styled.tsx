@@ -8,7 +8,8 @@ export const ContactSectionForm = styled.form`
 `;
 
 export const TextArea = styled.textarea`
-  font-size: 1rem;
+  font-size: ${(props) => props.theme.Font.md.size};
+  
   padding: 6px 5px;
   height: 200px;
   border-bottom: 1px solid black;

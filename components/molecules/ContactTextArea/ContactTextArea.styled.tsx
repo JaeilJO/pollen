@@ -18,10 +18,10 @@ export const PlaceHolderInTextArea = styled.span`
   transition: 320ms;
   left: 5px;
   top: ${(props) => (props.textAreaChage ? `-15px` : `10px`)};
-  font-size: ${(props) => (props.textAreaChage ? `0.8rem` : `1rem`)};
-  font-weight: ${(props) => (props.textAreaChage ? `800` : ``)};
+  font-size: ${(props) => (props.textAreaChage ? props.theme.Font.sm.size : props.theme.Font.md.size)};
+  font-weight: ${(props) => (props.textAreaChage ? props.theme.Font.md.weight : props.theme.Font.sm.weight)};
   color: ${(props) =>
-    props.textAreaChage ? props.theme.PrimaryColor : props.theme.BlackColor};
+    props.textAreaChage ? props.theme.Color.Primary : props.theme.Color.Black};
 \` ;
   pointer-events: none;
 `;
