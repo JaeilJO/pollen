@@ -1,15 +1,15 @@
 export default {
   Color : {
-    PrimaryColor: `#E66E62`,
-    SecondaryColor: `#F9E4E4`,
-    BlackColor: `#333333`,
-    NonSelectColor: `#E2E2E2`,
+    Primary: `#E66E62`,
+    Secondary: `#F9E4E4`,
+    Black: `#333333`,
+    NonSelect: `#E2E2E2`,
   },
-  FontSize:{
-    sm:'14px',
-    md:'16px',
-    lg:'24px',
-    xl: '48px'
+  Font: {
+    sm: {size: '14px', weight: '300'},
+    md: {size: '16px', weight: '500'},
+    lg: {size: '24px', weight: '700'},
+    xl: {size: '48px', weight: '700'},
   }
 };
 
